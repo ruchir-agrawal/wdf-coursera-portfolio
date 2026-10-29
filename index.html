@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="Portfolio of Ruchir Agrawal, a web developer showcasing projects, skills, and contact information."
+  />
+  <title>Ruchir Agrawal | Web Developer Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header>
+    <h1>Ruchir Agrawal</h1>
+    <p>Web Developer building accessible and user-focused digital experiences.</p>
+
+    <nav role="navigation" aria-label="Primary navigation">
+      <button
+        id="menu-toggle"
+        class="hamburger"
+        type="button"
+        aria-label="Toggle navigation menu"
+        aria-controls="primary-nav-links"
+        aria-expanded="false"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-links" id="primary-nav-links">
+        <li><a href="#about-me">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <section id="about-me" aria-labelledby="about-heading">
+      <h2 id="about-heading">About Me</h2>
+      <p>
+        I am a passionate developer who enjoys creating responsive and inclusive
+        websites. I focus on clean code, strong performance, and thoughtful user
+        experience.
+      </p>
+    </section>
+
+    <section id="projects" aria-labelledby="projects-heading">
+      <h2 id="projects-heading">Projects</h2>
+
+      <div class="project-controls" role="toolbar" aria-label="Filter projects by category">
+        <button type="button" class="filter-button is-active" data-filter="all">All</button>
+        <button type="button" class="filter-button" data-filter="productivity">Productivity</button>
+        <button type="button" class="filter-button" data-filter="education">Education</button>
+      </div>
+
+      <div class="projects-grid">
+        <article class="project-card" data-category="productivity" aria-labelledby="project-1-title">
+          <h3 id="project-1-title">TaskFlow App</h3>
+          <figure>
+            <img
+              class="project-image"
+              src="https://via.placeholder.com/600x340.png?text=TaskFlow+Dashboard"
+              alt="Screenshot of TaskFlow dashboard showing tasks organized in columns"
+              tabindex="0"
+              role="button"
+              aria-label="Open larger preview of TaskFlow dashboard"
+            />
+            <figcaption>A productivity app for task planning and tracking.</figcaption>
+          </figure>
+          <p>Built with modern JavaScript, featuring drag-and-drop and real-time updates.</p>
+        </article>
+
+        <article class="project-card" data-category="education" aria-labelledby="project-2-title">
+          <h3 id="project-2-title">Campus Events Portal</h3>
+          <figure>
+            <img
+              class="project-image"
+              src="https://via.placeholder.com/600x340.png?text=Campus+Events"
+              alt="Event listing page with cards for workshops and seminars"
+              tabindex="0"
+              role="button"
+              aria-label="Open larger preview of Campus Events portal"
+            />
+            <figcaption>A portal to discover and manage college events.</figcaption>
+          </figure>
+          <p>Includes search, filters, and event registration with responsive layouts.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="skills" aria-labelledby="skills-heading">
+      <h2 id="skills-heading">Skills</h2>
+      <ul>
+        <li>HTML5 and semantic markup</li>
+        <li>CSS3 and responsive design</li>
+        <li>JavaScript (ES6+)</li>
+        <li>Git and GitHub workflows</li>
+        <li>Accessibility best practices (WCAG)</li>
+      </ul>
+    </section>
+
+    <section id="contact" aria-labelledby="contact-heading">
+      <h2 id="contact-heading">Contact</h2>
+      <form id="contact-form" action="#" method="post" aria-label="Contact form" novalidate>
+        <label for="name">Full Name</label>
+        <input
+          id="name"
+          name="name"
+          type="text"
+          required
+          autocomplete="name"
+          aria-describedby="name-error"
+        />
+        <p id="name-error" class="field-error" aria-live="polite"></p>
+
+        <label for="email">Email Address</label>
+        <input
+          id="email"
+          name="email"
+          type="email"
+          required
+          autocomplete="email"
+          aria-describedby="email-error"
+        />
+        <p id="email-error" class="field-error" aria-live="polite"></p>
+
+        <label for="message">Message</label>
+        <textarea
+          id="message"
+          name="message"
+          rows="5"
+          required
+          aria-describedby="message-error"
+        ></textarea>
+        <p id="message-error" class="field-error" aria-live="polite"></p>
+
+        <button type="submit">Send Message</button>
+        <p id="form-feedback" class="form-feedback" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-hidden="true">
+    <button type="button" id="lightbox-close" class="lightbox-close" aria-label="Close image preview">&times;</button>
+    <img id="lightbox-image" src="" alt="" />
+    <p id="lightbox-caption"></p>
+  </div>
+
+  <footer>
+    <p>&copy; 2026 Ruchir Agrawal.
+    </p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
